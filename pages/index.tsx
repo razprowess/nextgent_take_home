@@ -1,22 +1,11 @@
 import { Box, Spinner, TextInput } from "grommet";
 import React, { useEffect, useMemo, useState } from "react";
+import { Container, ErrorText } from "../components/styled";
 import UserCard from "../components/user.card";
 import { fetchStudents, Student } from "../services/students";
-import styled from 'styled-components';
+import { LoadingState } from "../services/types";
 
 type Props = {};
-
-type LoadingState = 'idle' | 'loading' | 'error' | 'success';
-
-const Container = styled.div`
-  display:flex;
-  margin:32px;
-  justify-content:center;
-`
-
-const ErrorText = styled.p`
-  color: red;
-`
 
 const Main: React.FC<Props> = ({ }) => {
 
@@ -61,7 +50,7 @@ const Main: React.FC<Props> = ({ }) => {
       
       {loadingState == 'success' && <Box direction="row" wrap={true}>
         {filteredStudents.map((s) => (
-          <Box margin="10px">
+          <Box margin="10px" key={s.id}>
             <UserCard user={s} />
           </Box>
         ))}
