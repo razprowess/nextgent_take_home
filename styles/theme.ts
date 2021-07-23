@@ -4,6 +4,16 @@ export default {
   spacing: 24,
   defaultMode: "light",
   global: {
+    elevation: {
+      dark: {
+        none: 'none',
+        xsmall: 'none',
+        small: 'none',
+        medium: 'none',
+        large: 'none',
+        xlarge: 'none',
+      }
+    },
     colors: {
       brand: {
         dark: "#FFC507",
@@ -42,7 +52,7 @@ export default {
         light: "#666666",
       },
       border: {
-        dark: "#444444",
+        dark: "#30363d",
         light: "#CCCCCC",
       },
       control: "brand",
@@ -73,6 +83,11 @@ export default {
       background: "selected-background",
       color: "selected-text",
     },
+  },
+  card: {
+    container: {
+      border: 'solid 1px  #30363d',
+    }
   },
   chart: {},
   diagram: {
