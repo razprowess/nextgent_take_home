@@ -35,7 +35,6 @@ export const Cell = styled.div`
 
 export const BoldParagraph = styled(GrommetParagraph)`
     font-weight: bold;
-    color: #333333;
     font-size: 16px;
     margin: 0px;
 `
@@ -50,7 +49,6 @@ export const Paragraph = styled(GrommetParagraph)`
 export const StudentDetailsCardHeader = styled(CardHeader)`
     border-bottom: 1px solid #EFEFEE;
     font-weight: bold;
-    color: #000;
 `
 
 export const StudentDetailsCardBody = styled(CardBody)`

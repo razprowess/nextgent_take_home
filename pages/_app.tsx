@@ -1,12 +1,16 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { Box, Button, Grommet, Header } from "grommet";
-import { Moon } from "grommet-icons";
+import { Moon, Sun } from "grommet-icons";
 import NGTTheme from "../styles/theme";
+import { useState } from "react";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
   return (
-    <Grommet theme={NGTTheme} themeMode="light">
+    <Grommet theme={NGTTheme} themeMode={isDarkMode ? 'dark' : 'light'}>
       <Box height="100vh" width="100vw">
         <Header background="#353B41">
           <img
@@ -14,9 +18,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
             src="https://www.ngt.academy/wp-content/uploads/2021/06/ngtacademy-white.png"
           />
           <Button
-            icon={<Moon />}
+            icon={isDarkMode ? <Sun/> : <Moon />}
             onClick={() => {
-              // TODO
+              setIsDarkMode((inDarkMode)=>!inDarkMode);
             }}
           />
         </Header>

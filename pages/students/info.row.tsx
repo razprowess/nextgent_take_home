@@ -7,7 +7,7 @@ const StudentInfoDetailsRow = ({ label, value }: { label: string, value: string 
 
     <S.Row>
         <S.FlexCell><S.BoldParagraph margin="small">{label}</S.BoldParagraph></S.FlexCell>
-        <S.Cell><S.Paragraph style={{color:"#333"}}>{value || "-"}</S.Paragraph></S.Cell>
+        <S.Cell><S.Paragraph>{value || "-"}</S.Paragraph></S.Cell>
     </S.Row>
     
 );
