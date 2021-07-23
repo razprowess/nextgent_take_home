@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Button, Card, CardBody, CardHeader, Header, Heading, Paragraph, Spinner, TextInput } from "grommet";
+import { Avatar, Box, Button, Card, CardBody, CardHeader, Header, Heading, Paragraph, Spinner, TextInput } from "grommet";
 import { useRouter } from 'next/router'
 import { fetchStudent, Student } from "../../services/students";
 import { LoadingState } from "../../services/types";
@@ -49,6 +49,8 @@ const StudentInfo = () => {
             <S.StudentDetailsCardHeader pad="medium">STUDENT DETAILS</S.StudentDetailsCardHeader>
 
             <S.StudentDetailsCardBody>
+
+              <S.StudentDetailsAvatar src={student?.avatar} />
 
               <StudentInfoDetailsRow label="First Name" value={student?.first_name} />
 

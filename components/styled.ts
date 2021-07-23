@@ -1,4 +1,4 @@
-import { Button, CardBody, CardHeader, Paragraph as GrommetParagraph, CardFooter as GrommetCardFooter } from 'grommet';
+import { Button, CardBody, CardHeader, Paragraph as GrommetParagraph, CardFooter as GrommetCardFooter, Avatar } from 'grommet';
 import styled from 'styled-components';
 
 
@@ -76,4 +76,8 @@ export const ViewButton = styled(Button)`
     font-weight: bold;
     font-size: 12px;
     margin-top: 16px;
+`
+
+export const StudentDetailsAvatar = styled(Avatar)`
+    margin: 0 auto;
 `
